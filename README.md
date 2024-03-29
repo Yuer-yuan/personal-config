@@ -81,7 +81,8 @@ remove all entries containing "aur.tsinghua.edu.cn"
 
 ![image-20240302211353871](./assets/image-20240302211353871.png)
 
-to handle case that cuda randomly crashes causing `cuda init error`, execute `sudo modprobe -r nvidia_uvm && sudo modprobe nvidia_uvm`
+to handle case that cuda randomly crashes causing `cuda init error`, 
+execute `sudo modprobe -r nvidia_uvm && sudo modprobe nvidia_uvm`
 
 ## mozilla
 
@@ -101,3 +102,20 @@ be careful to check if cuda version matches torch version
 ## zoxide
 
 add `eval "$(zoxide init zsh)"` to `~/.zshrc`
+
+## WPS
+```
+yay -S ttf-wps-fonts wps-office-mui-zh-cn wps-office-mime-cn wps-office-cn
+yay -S wps-office-fonts ttf-ms-fonts
+
+## pycharm
+`pamac install pycharm-community-edition`
+
+## wechat
+install wine and winetricks, then set environments: 
+```
+export WINEARCH=win32
+export WINEPREFIX=~/.wine32
+```
+install `fakechinese` fonts: `winetricks fakechinese`, 
+then install wechat `wine [path to wechat_x86.exe]`
