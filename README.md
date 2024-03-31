@@ -107,6 +107,7 @@ add `eval "$(zoxide init zsh)"` to `~/.zshrc`
 ```
 yay -S ttf-wps-fonts wps-office-mui-zh-cn wps-office-mime-cn wps-office-cn
 yay -S wps-office-fonts ttf-ms-fonts
+yay -S ttf-wps-fonts libtiff5
 
 ## pycharm
 `pamac install pycharm-community-edition`
