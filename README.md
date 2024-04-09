@@ -121,3 +121,6 @@ export WINEPREFIX=~/.wine32
 ```
 install `fakechinese` fonts: `winetricks fakechinese`, 
 then install wechat `wine [path to wechat_x86.exe]`
+
+## zip file encoded with `gbk`
+install `unarchiver` with `sudo pacman -S unarchiver`, then unzip file with `unar [filename]`
