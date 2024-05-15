@@ -36,33 +36,33 @@ update system – `sudo pacman -Syu`
 ## issue: [tsinghua no longer support aur source](https://blog.51cto.com/u_14597003/5989103)
 remove all entries containing "aur.tsinghua.edu.cn"
 
-## pinyin input method
+## sogou pinyin input
 
-> [你的下一个输入法何必是搜狗，拥抱fcitx5](https://mengxun.club/2020/12/28/%E4%BD%A0%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E8%BE%93%E5%85%A5%E6%B3%95%E4%BD%95%E5%BF%85%E6%98%AF%E6%90%9C%E7%8B%97%EF%BC%8C%E6%8B%A5%E6%8A%B1fcitx5/)
->
-> `sudo pacman -S fcitx5 fcitx5-chinese-addons fcitx5-chewing fcitx5-pinyin-zhwiki fcitx5-pinyin-moegirl fcitx5-config-qt fcitx5-gtk fcitx5-qt4 fcitx5-qt5 fcitx5-material-color`
->
-> ```
-> # ~/.pam_environment
-> 
-> GTK_IM_MODULE DEFAULT=fcitx
-> QT_IM_MODULE  DEFAULT=fcitx
-> XMODIFIERS    DEFAULT=\@im=fcitx
-> SDL_IM_MODULE DEFAULT=fcitx
-> ```
->
-> ```
-> # ~/.xporfile
-> 
-> export QT_IM_MODULE=fcitx5
-> ```
->
-> then open configure panel to select `pinyin`
+install fcitx-configtool: `sudo pacman -S fcitx-configtool`
+
+download [deb file](https://shurufa.sogou.com/linux)
+
+install and change configurations: `yay -S fcitx-sogoupinyin --editmenu` (if checksum error still occurs, package cleaning is needed).
+
+replace `curl -s $url | grep -o "https://[0-9a-z:\/\._-]*/$filename" | xargs curl -o $startdir/$filename` with `cp ~/Downloads/sogoupinyin_4.2.1.145_amd64.deb $startdir/$filename`
+
+add environment variables as follows:
+
+```
+# ~/.xporfile
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+```
+
+then open configure panel to add input method
 
 ## neovim
 `sudo pacman -S neovim`
 
 `git clone https://github.com/LazyVim/starter ~/.config/nvim && rm -rf ~/.config/nvim/.git && nvim`
+
+enable configurations by tapping `LazyVim Extras`
 
 ## tmux
 
@@ -109,15 +109,6 @@ yay -S ttf-wps-fonts wps-office-mui-zh-cn wps-office-mime-cn wps-office-cn
 yay -S wps-office-fonts ttf-ms-fonts
 yay -S ttf-wps-fonts libtiff5
 ```
-
-## pycharm
-`pamac install pycharm-community-edition`
-
-## wechat
-install wine and winetricks, then set environments: 
-```
-export WINEARCH=win32
-export WINEPREFIX=~/.wine32
 ```
 install `fakechinese` fonts: `winetricks fakechinese`, 
 then install wechat `wine [path to wechat_x86.exe]`
