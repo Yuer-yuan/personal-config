@@ -105,13 +105,8 @@ add `eval "$(zoxide init zsh)"` to `~/.zshrc`
 
 ## WPS
 ```
-yay -S ttf-wps-fonts wps-office-mui-zh-cn wps-office-mime-cn wps-office-cn
-yay -S wps-office-fonts ttf-ms-fonts
-yay -S ttf-wps-fonts libtiff5
+yay -S ttf-wps-fonts ttf-ms-fonts wps-office-fonts libtiff5 wps-office-mui-zh-cn wps-office-mime-cn wps-office-cn freetype2-wps
 ```
-```
-install `fakechinese` fonts: `winetricks fakechinese`, 
-then install wechat `wine [path to wechat_x86.exe]`
 
 ## zip file encoded with `gbk`
 install `unarchiver` with `sudo pacman -S unarchiver`, then unzip file with `unar [filename]`
