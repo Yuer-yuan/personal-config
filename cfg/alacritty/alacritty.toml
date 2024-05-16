@@ -1,0 +1,24 @@
+import = ["/home/guo/.config/alacritty/alacritty-theme/themes/gruvbox_dark.toml"]
+
+[font]
+size = 14
+
+[font.bold]
+family = "WenQuanYi Micro Hei Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "WenQuanYi Micro Hei Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "WenQuanYi Micro Hei Mono"
+style = "Italic"
+
+[font.normal]
+family = "WenQuanYi Micro Hei Mono"
+style = "Regular"
+
+[window]
+decorations = "none"
+startup_mode = "Maximized"
